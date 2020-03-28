@@ -1,0 +1,136 @@
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+body {
+  font: 14px "Century Gothic", Futura, sans-serif;
+  margin: 20px;
+}
+
+ol, ul {
+  padding-left: 30px;
+}
+
+.board-row:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.status {
+  margin-bottom: 10px;
+}
+
+.square {
+  background: #fff;
+  border: 1px solid #999;
+  float: left;
+  font-size: 38px;
+  font-weight: bold;
+  line-height: 38px;
+  height: 48px;
+  margin-right: -1px;
+  margin-top: -1px;
+  padding: 0;
+  text-align: center;
+  width: 48px;
+}
+
+.square:focus {
+  outline: none;
+}
+
+.kbd-navigation .square:focus {
+  background: #ddd;
+}
+
+.game {
+  display: flex;
+  flex-direction: row;
+}
+
+.game-info {
+  margin-left: 20px;
+}
+
+.display-flex-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.display-flex-column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.flex-1 {
+  -webkit-box-flex: 1;
+          flex: 1;
+  -ms-flex: 1 1 0%;
+}
+.flex-2 {
+  -webkit-box-flex: 2;
+          flex: 2;
+  -ms-flex: 2 2 0%;
+}
+.flex-3 {
+  -webkit-box-flex: 3;
+          flex: 3;
+  -ms-flex: 3 3 0%;
+}
+.flex-4 {
+  -webkit-box-flex: 4;
+          flex: 4;
+  -ms-flex: 4 4 0%;
+}
+.flex-5 {
+  -webkit-box-flex: 5;
+          flex: 5;
+  -ms-flex: 5 5 0%;
+}
+.flex-6 {
+  -webkit-box-flex: 6;
+          flex: 6;
+  -ms-flex: 6 6 0%;
+}
+.flex-7 {
+  -webkit-box-flex: 7;
+          flex: 7;
+  -ms-flex: 7 7 0%;
+}
+.flex-8 {
+  -webkit-box-flex: 8;
+          flex: 8;
+  -ms-flex: 8 8 0%;
+}
+.flex-9 {
+  -webkit-box-flex: 9;
+          flex: 9;
+  -ms-flex: 9 9 0%;
+}
+.flex-10 {
+  -webkit-box-flex: 10;
+          flex: 10;
+  -ms-flex: 10 10 0%;
+}
+.flex-11 {
+  -webkit-box-flex: 11;
+          flex: 11;
+  -ms-flex: 11 11 0%;
+}
+.flex-12 {
+  -webkit-box-flex: 12;
+          flex: 12;
+  -ms-flex: 12 12 0%;
+}
