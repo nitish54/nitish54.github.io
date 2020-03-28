@@ -35,6 +35,7 @@ ol, ul {
   padding: 0;
   text-align: center;
   width: 48px;
+  cursor: pointer;
 }
 
 .square:focus {
