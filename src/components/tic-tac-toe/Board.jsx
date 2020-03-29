@@ -71,7 +71,7 @@ class Board extends React.Component {
           board: boardClone,
           turn: nextTurn,
         });
-      } else if (isBoardComplete) {
+      } else if (!hasWinner && isBoardComplete) {
         this.setState({
           gameOn: false,
         });
