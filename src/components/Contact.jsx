@@ -20,7 +20,7 @@ import React, { useState } from 'react';
 //    - Who has access: Anyone
 // 4. Copy the Web App URL and replace GOOGLE_SCRIPT_URL below.
 // ─────────────────────────────────────────────────────────────
-const GOOGLE_SCRIPT_URL = 'YOUR_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE';
+const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzWIwjJPLRHUfwcvFIoH1RJ3j7aNYjamev9SGv6_eIOaC6GuLE0hTEZV-GG2VWCCvCRdw/exec';
 
 const INITIAL_FORM = { name: '', email: '', subject: '', message: '' };
 

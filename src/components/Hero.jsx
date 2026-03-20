@@ -25,12 +25,26 @@ function Hero() {
 
         <div className="hero-cta">
           <a href="#experience" className="btn-primary">View My Work</a>
-          <a href="#contact" className="btn-secondary">Get In Touch</a>
+          <a
+            href="/resume/NITISH%20KUMAR%20SINHA.pdf"
+            download="Nitish_Kumar_Sinha_Resume.pdf"
+            className="btn-secondary"
+          >
+            Download Resume
+          </a>
+          <a href="#contact" className="btn-outline">Get In Touch</a>
+        </div>
+      </div>
+
+      <div className="hero-image">
+        <div className="hero-image-wrapper">
+          <img src="/images/profile.jpg" alt="Nitish Kumar Sinha" />
         </div>
       </div>
 
       <div className="hero-social">
         <a href="https://github.com/nitish54" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/54nitish/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         <a href="mailto:54nitish@gmail.com">Email</a>
       </div>
 

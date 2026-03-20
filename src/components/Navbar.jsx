@@ -32,27 +32,47 @@ function Navbar() {
           </li>
         ))}
         {menuOpen && (
-          <li>
-            <a
-              href="https://github.com/nitish54"
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={closeMenu}
-              className="navbar-resume-btn"
-            >
-              GitHub
-            </a>
-          </li>
+          <>
+            <li>
+              <a
+                href="https://github.com/nitish54"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={closeMenu}
+              >
+                GitHub
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/54nitish/"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={closeMenu}
+              >
+                LinkedIn
+              </a>
+            </li>
+            <li>
+              <a
+                href="/resume/NITISH%20KUMAR%20SINHA.pdf"
+                download="Nitish_Kumar_Sinha_Resume.pdf"
+                onClick={closeMenu}
+                className="navbar-resume-btn"
+              >
+                Resume
+              </a>
+            </li>
+          </>
         )}
       </ul>
 
       <a
-        href="https://github.com/nitish54"
-        target="_blank"
-        rel="noopener noreferrer"
+        href="/resume/NITISH%20KUMAR%20SINHA.pdf"
+        download="Nitish_Kumar_Sinha_Resume.pdf"
         className="navbar-resume-btn"
       >
-        GitHub
+        Resume
       </a>
 
       <div
