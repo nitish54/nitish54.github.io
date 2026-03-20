@@ -1,68 +1,57 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# nitish54.github.io
 
-## Available Scripts
+Personal portfolio site for **Nitish Kumar Sinha** — Senior Software Engineer at Atlassian.
 
-In the project directory, you can run:
+Live: [nitish54.github.io](https://nitish54.github.io)
 
-### `yarn start`
+## Stack
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- React 16 (Create React App)
+- Plain CSS with custom properties (dark theme)
+- GitHub Actions → GitHub Pages (auto-deploy on push to `source`)
+- Contact form → Google Sheets via Apps Script Web App
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Local development
 
-### `yarn test`
+```bash
+npm install
+npm start          # webpack dev server at http://localhost:3000
+npm run build      # production build → ./build
+npm run serve      # serve production build at http://localhost:3000
+```
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+> Node 18+ requires `NODE_OPTIONS=--openssl-legacy-provider` due to webpack 4 — already set in the npm scripts.
 
-### `yarn build`
+## Deployment
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Push to the `source` branch. GitHub Actions builds and publishes `./build` to the `master` branch automatically.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## Contact form setup
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The contact form posts to a Google Apps Script Web App. To update the endpoint, replace the URL in `src/components/Contact.jsx`:
 
-### `yarn eject`
+```js
+const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/.../exec';
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Apps Script `doPost` function:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```js
+function doPost(e) {
+  var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+  var data = JSON.parse(e.postData.contents);
+  sheet.appendRow([new Date(), data.name, data.email, data.subject, data.message]);
+  return ContentService
+    .createTextOutput(JSON.stringify({ result: 'success' }))
+    .setMimeType(ContentService.MimeType.JSON);
+}
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Deploy as a Web App (Execute as: Me, Access: Anyone).
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Assets
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+| Path | Description |
+|---|---|
+| `public/images/profile.jpg` | Profile photo (circular, hero section) |
+| `public/resume/NITISH KUMAR SINHA.pdf` | Resume (linked from navbar + hero CTA) |
