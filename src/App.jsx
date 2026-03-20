@@ -1,43 +1,46 @@
-import React from 'react';
-import logo from './logo.svg';
-import Game from './components/tic-tac-toe/Game';
-import './common/css/App.css';
+import React, { useEffect } from 'react';
+import './portfolio.css';
+import Navbar from './components/Navbar';
+import Hero from './components/Hero';
+import Experience from './components/Experience';
+import Skills from './components/Skills';
+import Education from './components/Education';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      gameOn: false,
-    };
-  }
-
-  openGame = () => {
-    this.setState({
-      gameOn: true,
-    });
-  }
-
-  render() {
-    const { gameOn } = this.state;
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          {
-              gameOn
-                ? (<Game />)
-                : (
-                  <div>
-                    {' '}
-                    Welcome!!!
-                    <div className="App-link cursor-pointer" role="presentation" onClick={() => this.openGame()} onKeyPress={() => {}}>Lets play a game.</div>
-                  </div>
-                )
+function App() {
+  // Scroll-reveal: add .visible class when elements enter the viewport
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
           }
-        </header>
-      </div>
+        });
+      },
+      { threshold: 0.1 }
     );
-  }
+
+    const elements = document.querySelectorAll('.reveal');
+    elements.forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <div>
+      <Navbar />
+      <main>
+        <Hero />
+        <Experience />
+        <Skills />
+        <Education />
+        <Contact />
+      </main>
+      <Footer />
+    </div>
+  );
 }
 
 export default App;
