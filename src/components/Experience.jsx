@@ -2,10 +2,29 @@ import React, { useState } from 'react';
 
 const EXPERIENCE = [
   {
+    id: 'spotnana',
+    company: 'Spotnana',
+    role: 'Staff Software Engineer',
+    period: 'Apr 2026 – Present',
+    location: 'Bangalore',
+    description:
+      'Leading the AI Platform initiative for the organization — building a shared, AI-native platform that powers AI applications across the company, from conversational assistants to simpler request/response use cases, with a focus on the travel domain.',
+    bullets: [
+      'Leading design, architecture, and ground-up implementation of the organization-wide AI platform, powering multiple AI application types (conversational and request/response) across travel-domain use cases.',
+      'Building a simulation/evaluation framework to test AI applications before they go live — an ongoing, multi-milestone initiative.',
+      'Adding knowledge base support for agents, and extending agents to use MCPs, internal function calls, and system tools.',
+      'Building a security layer to proactively detect prompt injection attempts and mask PII before data is sent to the LLM.',
+      'Prioritizing platform observability — improving early visibility into issues and proactively resolving them before impact.',
+      'Mentoring 4-5 junior developers across multiple parallel feature tracks.',
+      'Designing, reviewing, and implementing features end-to-end, from concept through production.',
+    ],
+    tech: ['LLM Platforms (OpenAI, Bedrock)', 'MCP', 'Python', 'Java', 'Redis', 'Postgres', 'Distributed Systems'],
+  },
+  {
     id: 'atlassian',
     company: 'Atlassian',
     role: 'Senior Software Engineer',
-    period: 'Dec 2022 – Present',
+    period: 'Dec 2022 – Mar 2026',
     location: 'Bangalore',
     description:
       'Part of the Cloud Transition Org (Data Portability) and then the Ecosystem Organization, building a platform for 3P connectors to externalize the Teamwork Graph. Designed and architected a unified platform for backup/restore capabilities across Atlassian products.',

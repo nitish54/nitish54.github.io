@@ -11,8 +11,8 @@ function Hero() {
         <h2 className="hero-title">I build scalable distributed systems.</h2>
 
         <p className="hero-tagline">
-          Senior Software Engineer with 11+ years of experience designing and architecting
-          cloud-native, distributed platforms — currently at Atlassian, Bangalore.
+          Staff Software Engineer with 12+ years of experience designing and architecting
+          cloud-native, distributed platforms and AI-native systems — currently at Spotnana, Bangalore.
         </p>
 
         <p className="hero-location">

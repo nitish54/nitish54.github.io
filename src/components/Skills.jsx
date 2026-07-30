@@ -2,6 +2,10 @@ import React from 'react';
 
 const SKILLS = [
   {
+    category: 'AI / LLM Platforms',
+    tags: ['OpenAI', 'AWS Bedrock', 'MCP', 'Agents', 'Prompt Security', 'Evaluation Frameworks'],
+  },
+  {
     category: 'Languages',
     tags: ['Java', 'Kotlin', 'Python', 'JavaScript (ES6)', 'Groovy', 'Node.js'],
   },
